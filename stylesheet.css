@@ -1,0 +1,173 @@
+body{
+  background-color: white;
+}
+
+.site-wrapper{
+  display: grid;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 200px;
+  grid-template-rows: 90px 1fr 1fr 45px;
+  grid-template-areas:
+  "h n n n"
+  "b b b ny"
+  "c c c s"
+  "f f f f";
+}
+nav ul li{
+    display:inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 0.4em 1em 0em 0em;
+
+}
+.nested{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: minmax(10px, auto);
+}
+@media screen and (max-width: 600px) {
+  .site-wrapper{
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 100px auto auto auto auto 60px;
+    grid-template-areas:
+    "h"
+    "n"
+    "b"
+    "ny"
+    "c"
+    "s"
+    "f";
+  }
+nav ul{
+    text-align: center;
+    padding: 0em 0em 0em 0em;
+  }
+  .nested{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: minmax(10px, auto);
+  }
+}
+
+.site-header a{
+  color: white;
+  text-decoration: none;
+}
+
+.site-header a:hover{
+  color: #827c6f
+
+}
+
+.site-header{
+  grid-area: h;
+  font-family: "Open Sans", sans-serif;
+  background-color: #424242;
+  letter-spacing: 0.2em;
+}
+
+.site-logo{
+  text-align: center;
+}
+
+
+.site-nav a:link{
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+
+}
+
+.site-nav a:hover{
+  color: #827c6f;
+}
+
+
+
+.site-nav{
+  grid-area: n;
+  background-color: #d3dae5;
+  font-size: 1.2em;
+}
+
+.site-artikel{
+  grid-area: c;
+  font-family: "Open Sans", sans-serif;
+  background-color: #d3dae5;
+}
+
+.site-artikelbild{
+  float: left;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 500px;
+  padding-bottom: 5px;
+}
+
+figure{
+  padding:0;
+  margin:0;
+}
+.site-sidebar{
+  grid-area: s;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #d3dae5;
+}
+
+.site-sidebarnested{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+}
+
+.nested-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: minmax(10px, auto);
+}
+
+.site-huvudbild{
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  max-height: 450px;
+}
+
+.site-huvudbildcenter{
+  grid-area: b;
+  margin: 0 0 -4px 0;
+  padding: 0;
+}
+
+
+.site-nyheter{
+  grid-area: ny;
+  background-color: #d3dae5;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+
+.site-nyheterarticle{
+padding: 10px;
+
+}
+
+.site-artiklar{
+  padding: 1em;
+}
+
+footer{
+  background-color: #d3dae5;
+  grid-area: f;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+}
