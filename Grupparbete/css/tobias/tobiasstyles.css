@@ -1,3 +1,59 @@
 #link-activeid a{
   color: #9f8d68;
 }
+
+.effect-picture{
+  filter: blur(1.2px) contrast(140%) brightness(1.3);
+}
+
+.text-headertext{
+  font-family: Monospace, sans-serif;
+  font-size: 15px;
+  color: #fff;
+}
+
+.site-huvudbild{
+  width: 100%;
+  height: 100%;
+  max-width: 1366px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.site-huvudbildgrid{
+  grid-area: hb;
+}
+
+/* Start grid */
+.site-wrapper{
+  display: grid;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 200px;
+  grid-template-rows: 90px auto 1fr 45px;
+  grid-template-areas:
+  "h n n n"
+  "hb hb hb hb"
+  "c c c s"
+  "f f f f";
+}
+/* End grid */
+
+/* Mobile screen grid settings */
+@media screen and (max-width: 600px) {
+  .site-wrapper{
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 100px auto auto auto auto 60px;
+    grid-template-areas:
+    "h"
+    "n"
+    "b"
+    "ny"
+    "c"
+    "s"
+    "f";
+  }
+/* End of mobile grid settings */
