@@ -21,7 +21,7 @@ body{
 /* End grid */
 
 /* Settings for dekstop navigation */
-nav ul li{
+.site-nav li{
     display:inline-block;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -51,7 +51,7 @@ and site-artikel nested grid */
     "s"
     "f";
   }
-nav ul{
+.site-nav ul{
     text-align: center;
     padding: 0em 0em 0em 0em;
   }
