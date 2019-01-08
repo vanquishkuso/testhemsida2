@@ -2,6 +2,7 @@ body{
   background-color: white;
 }
 
+/* Start grid */
 .site-wrapper{
   display: grid;
   max-width: 1366px;
@@ -17,19 +18,26 @@ body{
   "c c c s"
   "f f f f";
 }
+/* End grid */
+
+/* Settings for dekstop navigation */
 nav ul li{
     display:inline-block;
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     letter-spacing: 1.5px;
     padding: 0.4em 1em 0em 0em;
-
 }
+/* Nested grid for site.artikel */
 .nested{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: minmax(10px, auto);
 }
+
+/* Settings for mobile and smaller screens.
+Including mobile layout settings for navigation
+and site-artikel nested grid */
 @media screen and (max-width: 600px) {
   .site-wrapper{
     grid-template-columns: 100%;
@@ -53,6 +61,7 @@ nav ul{
     grid-auto-columns: minmax(10px, auto);
   }
 }
+/*End of mobile settings */
 
 .site-header a{
   color: white;
@@ -61,10 +70,7 @@ nav ul{
 
 .site-header a:hover{
   color: #827c6f
-
 }
-
-
 
 .site-header{
   grid-area: h;
@@ -77,20 +83,22 @@ nav ul{
   text-align: center;
 }
 
-
 .site-nav a:link{
   color: black;
   text-decoration: none;
   border-bottom: 1px solid black;
-
-}
-
-.site-nav a:hover{
-  color: #827c6f;
 }
 
 .site-nav a:visited{
-  color: #fff;
+  color: #000;
+}
+
+.site-nav a:link:hover{
+  color: #827c6f;
+}
+
+.site-nav a:visited:hover{
+  color: #827c6f;
 }
 
 .site-nav{
@@ -105,6 +113,10 @@ nav ul{
   background-color: #d3dae5;
 }
 
+.site-artikel > h2{
+padding: 0em 0em 0em 1em;
+}
+
 .site-artikelbild{
   float: left;
   width: 100%;
@@ -114,17 +126,22 @@ nav ul{
   padding-bottom: 5px;
 }
 
-figure{
+/* Article figure reset */
+.site-artikelfigure{
   padding:0;
   margin:0;
 }
+
+/* Blog */
 .site-sidebar{
   grid-area: s;
   padding: 10px;
   font-family: "Open Sans", sans-serif;
   background-color: #d3dae5;
+  text-align: center;
 }
 
+/* Nested grid for blog */
 .site-sidebarnested{
   display: grid;
   grid-template-columns: 1fr;
@@ -137,20 +154,23 @@ figure{
   grid-auto-columns: minmax(10px, auto);
 }
 
+/* Header picture settings */
 .site-huvudbild{
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 1200px;
-  max-height: 450px;
+  max-height: 500px;
+
 }
 
+/* Header picture grid settings */
 .site-huvudbildcenter{
   grid-area: b;
   margin: 0 0 -4px 0;
   padding: 0;
 }
 
-
+/* News sidebar beside Header image */
 .site-nyheter{
   grid-area: ny;
   background-color: #d3dae5;
@@ -158,13 +178,16 @@ figure{
   font-family: "Open Sans", sans-serif;
 }
 
-
-
-.site-nyheterarticle{
-padding: 10px;
-
+.site-nyheter > h2{
+  text-align: center;
 }
 
+/* news sidebar settings */
+.site-nyheterarticle{
+padding: 10px;
+}
+
+/* Articles content settings */
 .site-artiklar{
   padding: 1em;
 }
