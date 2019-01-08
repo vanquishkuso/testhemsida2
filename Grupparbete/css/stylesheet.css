@@ -64,6 +64,8 @@ nav ul{
 
 }
 
+
+
 .site-header{
   grid-area: h;
   font-family: "Open Sans", sans-serif;
@@ -87,7 +89,9 @@ nav ul{
   color: #827c6f;
 }
 
-
+.site-nav a:visited{
+  color: #fff;
+}
 
 .site-nav{
   grid-area: n;
