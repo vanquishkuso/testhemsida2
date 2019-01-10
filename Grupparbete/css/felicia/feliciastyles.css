@@ -1,0 +1,141 @@
+.site-header a{
+  color: white;
+  text-decoration: none;
+}
+
+.site-logo{
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.site-header{
+  grid-area: h;
+  font-family: "Open Sans", sans-serif;
+  background-color: #EED8EE;
+  letter-spacing: 1px;
+}
+
+.site-logo a:link{
+  color: black;
+  border-bottom: 1px black;
+}
+
+.site-logo a:visited{
+  color: #827c6f;
+}
+
+.site-header a:hover{
+  color: #827c6f;
+}
+
+.site-header a:visited{
+  color: #827c6f;
+}
+
+.site-nav a:link{
+  color: black;
+  text-decoration: none;
+  border-bottom: 3px solid black;
+}
+
+.site-nav a:visited{
+  color: #827c6f;
+}
+
+.site-nav a:link:hover{
+  color: #827c6f;
+}
+
+.site-nav a:visited:hover{
+  color: #827c6f;
+}
+
+  .site-nav li{
+    display:inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 0.4em 1em 0em 0em;
+  }
+
+  .site-nav {
+    text-align: center;
+  }
+
+.site-sidebar{
+  grid-area: i;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #EED8EE;
+  text-align: center;
+}
+
+.site-sidebarnested{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5px;
+}
+
+.site-nav{
+  grid-area: n;
+  background-color: #EED8EE;
+  font-size: 1.2em;
+}
+
+.site-första-stycket{
+  grid-area: b;
+  background-color: #EED8EE;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 10px 10px 10px
+}
+
+.site-artikelbild1{
+  grid-area: b;
+  max-width: 450px;
+  max-height: 350px;
+}
+
+.site-andra-stycket{
+  grid-area: d;
+  background-color: #EED8EE;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 10px 10px 10px
+}
+
+.site-artikelbild2{
+  grid-area: d;
+  max-width: 450px;
+  max-height: 350px;
+}
+
+
+.nested-stycke{
+  display: grid;
+  grid-template-columns: 1fr 1fr
+
+}
+
+.site-artikel{
+  grid-area: c;
+  font-family: "Open Sans", sans-serif;
+  background-color: #EED8EE;
+  padding: 10px 10px 10px 10px
+}
+
+.nested{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-auto-columns: minmax(10px, auto);
+grid-gap: 5em
+}
+
+#site-footer{
+    background-color: #EED8EE;
+    grid-area: f;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+  }
