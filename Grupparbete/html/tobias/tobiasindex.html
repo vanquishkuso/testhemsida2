@@ -11,14 +11,14 @@
 <body>
   <div class="site-wrapper">
 
-  <header class="site-header">
+  <header id="site-header">
     <a href="../index.html"><h1 class="site-logo">HEADER</h1></a>
     </header>
 
     <nav class="site-nav">
       <ul>
         <li><a href="../felicia/feliciaindex.html">Felicia</a></li>
-        <li id="link-activeid"><a href="tobiasindex.html">Tobias</a></li>
+        <li class="link-active"><a href="tobiasindex.html">Tobias</a></li>
         <li><a href="../elvira/elviraindex.html">Elvira</a></li>
       </ul>
     </nav>
@@ -28,20 +28,22 @@
       <figure class="site-huvudbildcenter">
         <img src="images/headerimage2.jpg" class="site-huvudbild effect-picture" alt="headerimage">
       </figure>
-      <h2 class="site-textoverlay">TekNews</h2>
+      <h1 class="site-textoverlay">TekNews</h1>
     </div>
 </div>
 
 <nav class="site-localnav">
   <ul>
     <li><a href="#">News</a></li>
-    <li id="link-activeid"><a href="#">Reviews</a></li>
+    <!-- Fixa classen nedan så den funkar-->
+    <li><a href="#">Reviews</a></li>
     <li><a href="#">Events</a></li>
   </ul>
 </nav>
 
 
 <section class="site-artikel nested">
+  <h2 class="site-artikelh2">News</h2>
   <article class="site-artiklar">
     <figure class="site-artikelfigure">
       <img src="https://via.placeholder.com/800x500" class="site-artikelbild" alt="">
