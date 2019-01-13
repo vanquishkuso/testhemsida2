@@ -2,7 +2,7 @@ body{
   background-color: white;
 }
 
-/* Start grid */
+/* Start grid settings for large screens*/
 .site-wrapper{
   display: grid;
   max-width: 1366px;
@@ -28,17 +28,22 @@ body{
     letter-spacing: 1.5px;
     padding: 0.4em 1em 0em 0em;
 }
+
 /* Nested grid for site.artikel */
 .nested{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
   grid-auto-columns: minmax(10px, auto);
   grid-template-rows: 1px auto;
 }
 
 /* Settings for mobile and smaller screens.
 Including mobile layout settings for navigation
-and site-artikel nested grid and layout fixes for content*/
+and site-artikel nested grid, and layout fixes for content
+Reference: https://alligator.io/css/css-grid-holy-grail-layout/
+Reference: https://bitsofco.de/holy-grail-layout-css-grid/
+*/
 @media screen and (max-width: 600px) {
   .site-wrapper{
     grid-template-columns: 100%;
@@ -52,28 +57,31 @@ and site-artikel nested grid and layout fixes for content*/
     "s"
     "f";
   }
+  .site-artikelh2{
+    text-align: center;
+  }
+
 .site-nav ul{
     text-align: center;
     padding: 0em 0em 0em 0em;
   }
+
+/* Site-artikel nested grid */
   .nested{
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-flow: row;
     grid-auto-columns: minmax(10px, auto);
   }
 
-  .site-artikelh2{
-    text-align: center;
-  }
-  .site-artiklar{
-   margin-top: 0.8em;
-  }
+/* Aside sidebar blog settings */
   .site-blogpost{
     text-align: left;
   }
 }
 /*End of mobile settings */
 
+/* Start main header settings */
 #site-header a{
   color: white;
   text-decoration: none;
@@ -95,7 +103,9 @@ and site-artikel nested grid and layout fixes for content*/
   text-align: center;
   font-size: 2em;
 }
+/* End main header settings */
 
+/* Start navigation settings */
 .site-nav a:link{
   color: black;
   text-decoration: none;
@@ -119,7 +129,51 @@ and site-artikel nested grid and layout fixes for content*/
   background-color: #d3dae5;
   font-size: 1.2em;
 }
+/* End navigation settings */
 
+/* Header picture settings */
+.site-huvudbild{
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 500px;
+}
+
+/* Header picture grid settings */
+.site-huvudbildcenter{
+  grid-area: b;
+  margin: 0 0 -4px 0;
+  padding: 0;
+}
+
+
+/* Sidebar news nested grid settings*/
+.nested-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: minmax(10px, auto);
+}
+
+/* Start Sidebar news settings */
+.site-nyheter{
+  grid-area: ny;
+  background-color: #d3dae5;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+}
+
+.site-nyheter > h2{
+  text-align: center;
+}
+
+.site-nyheterarticle{
+padding: 10px;
+}
+/* End Sidebar news settings */
+
+
+/* Start main articles settings */
+/* Main articles grid settings */
 .site-artikel{
   grid-area: c;
   font-family: "Open Sans", sans-serif;
@@ -127,6 +181,7 @@ and site-artikel nested grid and layout fixes for content*/
   padding-top: 30px;
 }
 
+/* Main articles picture settings */
 .site-artikelbild{
   float: left;
   width: 100%;
@@ -136,13 +191,25 @@ and site-artikel nested grid and layout fixes for content*/
   padding-bottom: 5px;
 }
 
-/* Article figure reset */
+/* Main article figure reset */
 .site-artikelfigure{
   padding:0;
   margin:0;
 }
 
-/* Blog */
+/* Start main articles content settings */
+.site-artikelh2{
+  padding: 0px 0px 0px 15px;
+  margin-top: -20px;
+}
+
+.site-artiklar{
+  padding: 1em;
+  margin-top: 0.8em;
+}
+/* End main articles settings */
+
+/* Start blog settings */
 .site-sidebar{
   grid-area: s;
   padding: 10px;
@@ -161,58 +228,9 @@ and site-artikel nested grid and layout fixes for content*/
   grid-template-columns: 1fr;
   grid-gap: 5px;
 }
+/* End blog settings*/
 
-.nested-header{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: minmax(10px, auto);
-}
-
-/* Header picture settings */
-.site-huvudbild{
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  max-height: 500px;
-
-}
-
-/* Header picture grid settings */
-.site-huvudbildcenter{
-  grid-area: b;
-  margin: 0 0 -4px 0;
-  padding: 0;
-}
-
-/* News sidebar beside Header image */
-.site-nyheter{
-  grid-area: ny;
-  background-color: #d3dae5;
-  display: block;
-  font-family: "Open Sans", sans-serif;
-}
-
-.site-nyheter > h2{
-  text-align: center;
-}
-
-/* news sidebar settings */
-.site-nyheterarticle{
-padding: 10px;
-}
-
-/* Articles content settings */
-.site-artiklar{
-  padding: 1em;
-}
-
-.site-artikelh2{
-padding: 0px 0px 0px 15px;
-margin-top: -20px;
-
-
-}
-
+/* Footer settings */
 #site-footer{
   background-color: #d3dae5;
   grid-area: f;
